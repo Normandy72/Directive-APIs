@@ -48,3 +48,15 @@ function MyDirective(){
 `.myMethod` - method name from isolate scope mapping
 
 `{myArg : 'v1'}` - map of parent template declared arg name to value from directive
+
+***
+##### _Summary_
+* '&' binding allows us to execute an expression (such a function value) in the context of the parent scope.
+* Parent template must declare an attribute providing:
+    * Method reference to call on the patent.
+    * Argument keys for directive to bind values to.
+* Directive:
+    * calls the referenced method;
+    * provides a map of argument key to value pairs;
+    * allows directive to pass data back to parent from isolate scope.
+***
